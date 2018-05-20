@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pl.edu.ur.oopl10;
 
 import java.util.InputMismatchException;
@@ -16,6 +11,32 @@ public class WprowadzZKonsoli {
         try{
             System.out.print("Podaj liczbe int: ");
             intValue = scanner.nextInt();
+        }
+        catch(InputMismatchException e){
+            System.out.println("! -> Blad. Wprowadzono nieprawidlowy typ danych!");
+        }
+    }
+    
+    public void wprowadzFloat(){
+        float floatValue;
+        Scanner scanner = new Scanner(System.in);
+        
+        try{
+            System.out.print("Podaj liczbe float: ");
+            floatValue = scanner.nextFloat();
+        }
+        catch(InputMismatchException e){
+            System.out.println("! -> Blad. Wprowadzono nieprawidlowy typ danych!");
+        }
+    }
+    
+    public void wprowadzChar(){
+        char charValue;
+        Scanner scanner = new Scanner(System.in);
+        
+        try{
+            System.out.print("Podaj znak: ");
+            charValue = scanner.next().charAt(0);
         }
         catch(InputMismatchException e){
             System.out.println("! -> Blad. Wprowadzono nieprawidlowy typ danych!");
